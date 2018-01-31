@@ -1609,7 +1609,7 @@ var Timeline = function (_Component) {
               };
               return __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                 'li',
-                null,
+                { key: index.toString() },
                 __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                   'div',
                   { className: 'vtimeline-date' },
