@@ -69,8 +69,8 @@ export default class Timeline extends Component {
                       { (index === array.length - 1) ? null : <div style={styles['rc-timeline-line']}></div> }
                     </div>
                     <div>
-                      <div style={styles['rc-timeline-title']}>Splunk alert</div>
-                      <div style={styles['rc-timeline-body']}>Service Response time slow, ervice Response time slow, ervice Response time slow, ervice Response time slow, ervice Response time slow, ervice Response time slow</div>
+                      <div style={styles['rc-timeline-title']}>{item.title}</div>
+                      <div style={styles['rc-timeline-body']}>{item.body}</div>
                     </div>
                   </div>
                 </li>
