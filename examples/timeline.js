@@ -1,6 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Timeline } from 'rc-timeline';
-import 'rc-timeline/assets/index.less';
 
-ReactDOM.render(<Timeline />, document.getElementById('__react-content'));
+const data = [
+    {
+        date: new Date(),
+        color: '#00ff00',
+        title: 'Splunk',
+        body: 'Service Response time show'
+    },
+    {
+        date: new Date(),
+        color: '#ff0000',
+        title: 'Splunk',
+        body: 'Service Response time show'
+    },
+    {
+        date: new Date(),
+        color: '#ff0000',
+        title: 'Splunk',
+        body: 'Service Response time show'
+    },
+    {
+        date: new Date(),
+        color: '#ff0000',
+        title: 'Splunk',
+        body: 'Service Response time show'
+    },
+    {
+        date: new Date(),
+        color: '#ff0000',
+        title: 'Splunk',
+        body: 'Service Response time show'
+    }
+];
+
+ReactDOM.render(<Timeline data={data} />, document.getElementById('__react-content'));
