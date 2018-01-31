@@ -1,0 +1,71 @@
+{
+  "name": "rc-timeline",
+  "version": "0.0.3",
+  "description": "React Timeline Component",
+  "keywords": [
+    "react",
+    "react-component",
+    "react-timeline",
+    "timeline"
+  ],
+  "homepage": "https://github.com/xupea/dummy-react-timeline",
+  "author": "sysu.peter.hsu@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:xupea/dummy-react-timeline.git"
+  },
+  "bugs": {
+    "url": "https://github.com/xupea/dummy-react-timeline/issues"
+  },
+  "files": [
+    "lib",
+    "es",
+    "dist",
+    "assets/*.css"
+  ],
+  "license": "MIT",
+  "config": {
+    "port": 8001
+  },
+  "main": "./lib/index",
+  "module": "./es/index",
+  "scripts": {
+    "build": "rc-tools run build",
+    "compile": "rc-tools run compile --babel-runtime",
+    "gh-pages": "rc-tools run gh-pages",
+    "start": "rc-tools run server",
+    "pub": "rc-tools run pub --babel-runtime",
+    "lint": "rc-tools run lint",
+    "lint:fix": "rc-tools run lint --fix",
+    "test": "jest",
+    "prepublish": "rc-tools run guard",
+    "coverage": "jest --coverage"
+  },
+  "jest": {
+    "setupFiles": [
+      "./tests/setup.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "transform": {
+      "\\.jsx?$": "./node_modules/rc-tools/scripts/jestPreprocessor.js"
+    }
+  },
+  "devDependencies": {
+    "jest": "^21.2.1",
+    "rc-tools": "6.x",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1"
+  },
+  "pre-commit": [
+    "lint"
+  ],
+  "dependencies": {
+    "babel-runtime": "6.x",
+    "classnames": "^2.2.5"
+  }
+}
