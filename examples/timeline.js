@@ -589,9 +589,9 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 /* WEBPACK VAR INJECTION */(function(process) {
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports = __webpack_require__(112);
-} else {
   module.exports = __webpack_require__(111);
+} else {
+  module.exports = __webpack_require__(110);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
@@ -1286,7 +1286,7 @@ module.exports = ExecutionEnvironment;
  * 
  */
 
-var isTextNode = __webpack_require__(106);
+var isTextNode = __webpack_require__(105);
 
 /*eslint-disable no-bitwise */
 
@@ -1473,7 +1473,7 @@ module.exports = shallowEqual;
 if (process.env.NODE_ENV !== 'production') {
   var invariant = __webpack_require__(33);
   var warning = __webpack_require__(34);
-  var ReactPropTypesSecret = __webpack_require__(107);
+  var ReactPropTypesSecret = __webpack_require__(106);
   var loggedTypeFailures = {};
 }
 
@@ -1531,18 +1531,42 @@ module.exports = checkPropTypes;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(110);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react_dom___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react_dom__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rc_timeline__ = __webpack_require__(54);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rc_timeline___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_rc_timeline__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rc_timeline_assets_index_less__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rc_timeline_assets_index_less___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_rc_timeline_assets_index_less__);
 
 
 
 
+var data = [{
+    date: new Date(),
+    color: '#00ff00',
+    title: 'Splunk',
+    body: 'Service Response time show'
+}, {
+    date: new Date(),
+    color: '#ff0000',
+    title: 'Splunk',
+    body: 'Service Response time show'
+}, {
+    date: new Date(),
+    color: '#ff0000',
+    title: 'Splunk',
+    body: 'Service Response time show'
+}, {
+    date: new Date(),
+    color: '#ff0000',
+    title: 'Splunk',
+    body: 'Service Response time show'
+}, {
+    date: new Date(),
+    color: '#ff0000',
+    title: 'Splunk',
+    body: 'Service Response time show'
+}];
 
-__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_rc_timeline__["Timeline"], null), document.getElementById('__react-content'));
+__WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_rc_timeline__["Timeline"], { data: data }), document.getElementById('__react-content'));
 
 /***/ }),
 /* 54 */
@@ -2673,12 +2697,6 @@ for (var i = 0; i < DOMIterables.length; i++) {
 
 /***/ }),
 /* 100 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2713,7 +2731,7 @@ function camelize(string) {
 module.exports = camelize;
 
 /***/ }),
-/* 102 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2728,7 +2746,7 @@ module.exports = camelize;
 
 
 
-var camelize = __webpack_require__(101);
+var camelize = __webpack_require__(100);
 
 var msPattern = /^-ms-/;
 
@@ -2756,7 +2774,7 @@ function camelizeStyleName(string) {
 module.exports = camelizeStyleName;
 
 /***/ }),
-/* 103 */
+/* 102 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2792,7 +2810,7 @@ function hyphenate(string) {
 module.exports = hyphenate;
 
 /***/ }),
-/* 104 */
+/* 103 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2807,7 +2825,7 @@ module.exports = hyphenate;
 
 
 
-var hyphenate = __webpack_require__(103);
+var hyphenate = __webpack_require__(102);
 
 var msPattern = /^ms-/;
 
@@ -2834,7 +2852,7 @@ function hyphenateStyleName(string) {
 module.exports = hyphenateStyleName;
 
 /***/ }),
-/* 105 */
+/* 104 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2862,7 +2880,7 @@ function isNode(object) {
 module.exports = isNode;
 
 /***/ }),
-/* 106 */
+/* 105 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2877,7 +2895,7 @@ module.exports = isNode;
  * @typechecks
  */
 
-var isNode = __webpack_require__(105);
+var isNode = __webpack_require__(104);
 
 /**
  * @param {*} object The object to check.
@@ -2890,7 +2908,7 @@ function isTextNode(object) {
 module.exports = isTextNode;
 
 /***/ }),
-/* 107 */
+/* 106 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2909,7 +2927,7 @@ module.exports = ReactPropTypesSecret;
 
 
 /***/ }),
-/* 108 */
+/* 107 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2943,8 +2961,8 @@ var containsNode = __webpack_require__(48);
 var focusNode = __webpack_require__(49);
 var emptyObject = __webpack_require__(16);
 var checkPropTypes = __webpack_require__(52);
-var hyphenateStyleName = __webpack_require__(104);
-var camelizeStyleName = __webpack_require__(102);
+var hyphenateStyleName = __webpack_require__(103);
+var camelizeStyleName = __webpack_require__(101);
 
 /**
  * WARNING: DO NOT manually require this module.
@@ -18311,7 +18329,7 @@ module.exports = reactDom;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 109 */
+/* 108 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18547,7 +18565,7 @@ Z.injectIntoDevTools({findFiberByHostInstance:pb,bundleType:0,version:"16.2.0",r
 
 
 /***/ }),
-/* 110 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -18585,15 +18603,15 @@ if (process.env.NODE_ENV === 'production') {
   // DCE check should happen before ReactDOM bundle executes so that
   // DevTools can report bad minification during injection.
   checkDCE();
-  module.exports = __webpack_require__(109);
-} else {
   module.exports = __webpack_require__(108);
+} else {
+  module.exports = __webpack_require__(107);
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 111 */
+/* 110 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19958,7 +19976,7 @@ module.exports = react;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
 
 /***/ }),
-/* 112 */
+/* 111 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -19986,12 +20004,12 @@ isValidElement:K,version:"16.2.0",__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_F
 
 
 /***/ }),
-/* 113 */
+/* 112 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(53);
 
 
 /***/ })
-],[113]);
+],[112]);
 //# sourceMappingURL=timeline.js.map
