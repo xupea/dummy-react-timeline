@@ -1678,12 +1678,12 @@ var Timeline = function (_Component) {
                   __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                     'div',
                     { style: styles['rc-timeline-title'] },
-                    'Splunk alert'
+                    item.title
                   ),
                   __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                     'div',
                     { style: styles['rc-timeline-body'] },
-                    'Service Response time slow, ervice Response time slow, ervice Response time slow, ervice Response time slow, ervice Response time slow, ervice Response time slow'
+                    item.body
                   )
                 )
               )
