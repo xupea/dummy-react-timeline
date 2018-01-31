@@ -17,7 +17,7 @@ export default class Timeline extends Component {
                   borderRadius: '50%',
                 };
                 return (
-                  <li>
+                  <li key={index.toString()}>
                     <div className="vtimeline-date">
                       <div>21 Jan</div>
                       <div>10:05 AM</div>
