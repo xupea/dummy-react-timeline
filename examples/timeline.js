@@ -1577,6 +1577,48 @@ module.exports = __webpack_require__(56);
 
 
 
+var styles = {
+  'rc-timeline': {
+    width: '100%'
+  },
+  'rc-timeline-ul': {
+    margin: 0,
+    padding: 0,
+    fontSize: 10
+  },
+  'rc-timeline-li': {
+    listStyleType: 'none',
+    display: 'flex',
+    alignItems: 'flex-start'
+  },
+  'rc-timeline-date': {
+    minWidth: 43,
+    textAlign: 'right'
+  },
+  'rc-timeline-item': {
+    display: 'flex'
+  },
+  'rc-timeline-flow': {
+    marginLeft: 10,
+    marginRight: 10,
+    marginTop: 2
+  },
+  'rc-timeline-line': {
+    borderLeft: '1px solid grey',
+    height: '100%',
+    marginLeft: 3
+  },
+  'rc-timeline-title': {
+    fontSize: 10,
+    fontWeight: 'bold'
+  },
+  'rc-timeline-body': {
+    marginTop: 2,
+    fontSize: 10,
+    marginBottom: 10
+  }
+};
+
 var Timeline = function (_Component) {
   __WEBPACK_IMPORTED_MODULE_3_babel_runtime_helpers_inherits___default()(Timeline, _Component);
 
@@ -1593,64 +1635,60 @@ var Timeline = function (_Component) {
 
       return __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
         'div',
-        { className: 'App' },
+        { style: styles['rc-timeline'] },
         __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-          'div',
-          { className: 'vtimeline' },
-          __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-            'ul',
-            null,
-            data.map(function (item, index, array) {
-              var iconStyle = {
-                width: 7,
-                height: 7,
-                background: item.color,
-                borderRadius: '50%'
-              };
-              return __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                'li',
-                { key: index.toString() },
+          'ul',
+          { style: styles['rc-timeline-ul'] },
+          data.map(function (item, index, array) {
+            var iconStyle = {
+              width: 7,
+              height: 7,
+              background: item.color,
+              borderRadius: '50%'
+            };
+            return __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
+              'li',
+              { style: styles['rc-timeline-li'], key: index.toString() },
+              __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
+                'div',
+                { style: styles['rc-timeline-date'] },
                 __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                   'div',
-                  { className: 'vtimeline-date' },
-                  __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                    'div',
-                    null,
-                    '21 Jan'
-                  ),
-                  __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                    'div',
-                    null,
-                    '10:05 AM'
-                  )
+                  null,
+                  '21 Jan'
                 ),
                 __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                   'div',
-                  { className: 'vtimeline-item' },
+                  null,
+                  '10:05 AM'
+                )
+              ),
+              __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
+                'div',
+                { style: styles['rc-timeline-item'] },
+                __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
+                  'div',
+                  { style: styles['rc-timeline-flow'] },
+                  __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement('div', { style: iconStyle }),
+                  index === array.length - 1 ? null : __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement('div', { style: styles['rc-timeline-line'] })
+                ),
+                __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
+                  'div',
+                  null,
                   __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                     'div',
-                    { className: 'vtimeline-flow' },
-                    __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement('div', { style: iconStyle }),
-                    index === array.length - 1 ? null : __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement('div', { className: 'vertical-line' })
+                    { style: styles['rc-timeline-title'] },
+                    'Splunk alert'
                   ),
                   __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                     'div',
-                    { className: 'vtimeline-content' },
-                    __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                      'div',
-                      { className: 'title' },
-                      'Splunk alert'
-                    ),
-                    __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
-                      'div',
-                      { className: 'body' },
-                      'Service Response time slow, ervice Response time slow, ervice Response time slow, ervice Response time slow, ervice Response time slow, ervice Response time slow'
-                    )
+                    { style: styles['rc-timeline-body'] },
+                    'Service Response time slow, ervice Response time slow, ervice Response time slow, ervice Response time slow, ervice Response time slow, ervice Response time slow'
                   )
                 )
-              );
-            })
-          )
+              )
+            );
+          })
         )
       );
     }
