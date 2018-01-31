@@ -1,43 +1,48 @@
-.vtimeline ul {
+@selectPrefixCls: vtimeline;
+
+.@{selectPrefixCls} {
+  ul {
     margin: 0;
     padding: 0;
     font-size: 10px;
+
+    li {
+      list-style-type: none;
+      display: flex;
+      align-items: flex-start;
+
+      .vtimeline-date {
+        min-width: 43px;
+        text-align: right;
+      }
+
+      .vtimeline-item {
+        display: flex;
+
+        .vtimeline-flow {
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-top: 2px;
+
+          .vertical-line {
+            border-left: 1px solid grey;
+            height: 100%;
+            margin-left: 3px;
+          }
+        }
+
+        .vtimeline-content {
+          .title {
+            font-size: 10px;
+            font-weight: bold;
+          }
+          .body {
+            margin-top: 2px;
+            font-size: 10px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
   }
-  
-  .vtimeline ul li {
-    list-style-type: none;
-    display: flex;
-    align-items: flex-start;
-  }
-  
-  .vtimeline .vtimeline-date {
-    min-width: 43px;
-    text-align: right;
-  }
-  
-  .vtimeline .vtimeline-item {
-    display: flex;
-  }
-  
-  .vtimeline-flow {
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 2px;
-  }
-  
-  .vtimeline-flow .vertical-line {
-    border-left: 1px solid grey;
-    height: 100%;
-    margin-left: 3px;
-  }
-  
-  .vtimeline-content .title {
-    font-size: 10px;
-    font-weight: bold;
-  }
-  
-  .vtimeline-content .body {
-    margin-top: 2px;
-    font-size: 10px;
-    margin-bottom: 10px;
-  }
+}
