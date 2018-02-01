@@ -1708,7 +1708,7 @@ var Timeline = function (_Component) {
                   __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement('div', { style: iconStyle }),
                   index === array.length - 1 ? null : __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement('div', { style: styles['rc-timeline-line'] })
                 ),
-                __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
+                rightRender ? rightRender(item) : __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                   'div',
                   null,
                   __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
