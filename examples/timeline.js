@@ -1660,8 +1660,8 @@ var Timeline = function (_Component) {
     value: function render() {
       var _props = this.props,
           data = _props.data,
-          leftDate = _props.leftDate,
-          rightContent = _props.rightContent;
+          leftRender = _props.leftRender,
+          rightRender = _props.rightRender;
 
       return __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
         'div',
@@ -1685,7 +1685,7 @@ var Timeline = function (_Component) {
             return __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
               'li',
               { style: styles['rc-timeline-li'], key: index.toString() },
-              leftDate || __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
+              leftRender ? leftRender(item.date) : __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
                 'div',
                 { style: styles['rc-timeline-date'] },
                 __WEBPACK_IMPORTED_MODULE_4_react___default.a.createElement(
