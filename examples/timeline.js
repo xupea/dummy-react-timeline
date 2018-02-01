@@ -1678,7 +1678,7 @@ var Timeline = function (_Component) {
             };
             var date = void 0;
             if (__WEBPACK_IMPORTED_MODULE_6_moment___default.a.isDate(item.date)) {
-              date = __WEBPACK_IMPORTED_MODULE_6_moment___default()(date);
+              date = __WEBPACK_IMPORTED_MODULE_6_moment___default()(item.date);
             } else if (__WEBPACK_IMPORTED_MODULE_6_moment___default.a.isMoment(item.date)) {
               date = item.date;
             }
