@@ -60,7 +60,7 @@ export default class Timeline extends Component {
               };
               let date;
               if (moment.isDate(item.date)) {
-                date = moment(date);
+                date = moment(item.date);
               } else if (moment.isMoment(item.date)) {
                 date = item.date;
               }
