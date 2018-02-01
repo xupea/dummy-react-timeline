@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
+import moment from 'moment';
 
 const styles = {
   'rc-timeline': {
@@ -45,7 +46,7 @@ const styles = {
 
 export default class Timeline extends Component {
   render() {
-    const { data } = this.props;  
+    const { data, leftDate, rightContent } = this.props;  
     return (
       <div style={styles['rc-timeline']}>
         <ul style={styles['rc-timeline-ul']}>
@@ -54,15 +55,21 @@ export default class Timeline extends Component {
               let iconStyle = {
                 width: 7,
                 height: 7,
-                background: item.color,
+                background: item.color || '#ff0000',
                 borderRadius: '50%',
               };
+              let date;
+              if (moment.isDate(item.date)) {
+                date = moment(date);
+              } else if (moment.isMoment(item.date)) {
+                date = item.date;
+              }
               return (
                 <li style={styles['rc-timeline-li']} key={index.toString()}>
-                  <div style={styles['rc-timeline-date']}>
-                    <div>21 Jan</div>
-                    <div>10:05 AM</div>
-                  </div>
+                  {leftDate || (<div style={styles['rc-timeline-date']}>
+                    <div>{date.format('DD MMM')}</div>
+                    <div>{date.format('HH:mm A')}</div>
+                  </div>)}
                   <div style={styles['rc-timeline-item']}>
                     <div style={styles['rc-timeline-flow']}>
                       <div style={iconStyle}></div>
