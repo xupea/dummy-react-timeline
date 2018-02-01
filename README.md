@@ -2,7 +2,7 @@
 
 React Vertical Timeline Component.
 
-[![rc-calendar](screenshot.png)]
+![rc-calendar](screenshot.png)
 
 ## Usage
 
