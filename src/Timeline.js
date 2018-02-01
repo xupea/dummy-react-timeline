@@ -75,10 +75,10 @@ export default class Timeline extends Component {
                       <div style={iconStyle}></div>
                       { (index === array.length - 1) ? null : <div style={styles['rc-timeline-line']}></div> }
                     </div>
-                    <div>
+                    {rightRender ? rightRender(item) : (<div>
                       <div style={styles['rc-timeline-title']}>{item.title}</div>
                       <div style={styles['rc-timeline-body']}>{item.body}</div>
-                    </div>
+                    </div>)}
                   </div>
                 </li>
               );
