@@ -32,31 +32,31 @@ const data = [
     {
         date: new Date('1995-12-18T03:24:00'),
         color: '#00ff00',
-        title: 'Splunk',
+        title: 'Story1',
         body: 'Service Response time show'
     },
     {
         date: new Date('1995-12-18T03:24:00'),
         color: '#ff0000',
-        title: 'Splunk',
+        title: 'Story2',
         body: 'Service Response time show'
     },
     {
         date: new Date('1995-12-18T03:24:00'),
         color: '#ff0000',
-        title: 'Splunk',
+        title: 'Story3',
         body: 'Service Response time show'
     },
     {
         date: new Date('1995-12-18T03:24:00'),
         color: '#ff0000',
-        title: 'Splunk',
+        title: 'Story4',
         body: 'Service Response time show'
     },
     {
         date: new Date('1995-12-18T03:24:00'),
         color: '#ff0000',
-        title: 'Splunk',
+        title: 'Story5',
         body: 'Service Response time show'
     }
 ];
