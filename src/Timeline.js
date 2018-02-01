@@ -46,7 +46,7 @@ const styles = {
 
 export default class Timeline extends Component {
   render() {
-    const { data, leftDate, rightContent } = this.props;  
+    const { data, leftRender, rightRender } = this.props;  
     return (
       <div style={styles['rc-timeline']}>
         <ul style={styles['rc-timeline-ul']}>
@@ -66,7 +66,7 @@ export default class Timeline extends Component {
               }
               return (
                 <li style={styles['rc-timeline-li']} key={index.toString()}>
-                  {leftDate || (<div style={styles['rc-timeline-date']}>
+                  {leftRender ? leftRender(item.date) : (<div style={styles['rc-timeline-date']}>
                     <div>{date.format('DD MMM')}</div>
                     <div>{date.format('HH:mm A')}</div>
                   </div>)}
